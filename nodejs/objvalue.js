@@ -8,9 +8,19 @@ console.log(Object.values(a));
 };  
 object1();*/
    
-let obj = ()=>{
-  const z= {
-    x:'hello',
+//let obj = ()=>{
+  //const z= {
+   // x:'hello',
+   // y:'dhiman',
+   // z:'kumar'
+ // }
+ // console.log(Object.values(z));
+//};
+//obj();
+
+let obj =()=>{
+  const z = {
+    x:'yogesh',
     y:'dhiman',
     z:'kumar'
   }
