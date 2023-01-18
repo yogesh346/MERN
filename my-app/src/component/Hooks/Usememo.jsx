@@ -13,7 +13,7 @@ function App(){
         {mutliplication}<br/>
         <button onClick = {()=>setAdd(add+ 2)}>Addition</button>
         <span>{add}</span><br/>
-        <button onClick={()=>setManis(manis - 1)}>substration</button>
+        <button onClick={()=>setManis(manis -1)}>substration</button>
         <span>{manis}</span>
         </div>
     );

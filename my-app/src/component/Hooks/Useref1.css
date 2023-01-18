@@ -1,27 +1,11 @@
-.container {
-    display: flex;
-  }
-  
-  .side {
-    flex: 5 ;
-    height: 100vh;
-    overflow: scroll;
-  }
+
 
   table{
-    width: 100%;
-  }
-
-  td{
-    border: 1px solid black;
-  }
   
-  .content {
-    flex: 5;
-    height: 100vh;
+    height: 250px;
     overflow: hidden;
   }
+
   
-  .side .content {
-    overflow: visible;
-  }
+  
+  
