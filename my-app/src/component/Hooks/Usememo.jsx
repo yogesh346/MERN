@@ -4,7 +4,7 @@ function App(){
     const [add,setAdd]=useState(10);
     const [manis,setManis]=useState(50)
     const mutliplication = useMemo(function mutliply(){
-        console.log("ABCD")
+        console.log("AbCD")
         return add*2;
     })
     return(

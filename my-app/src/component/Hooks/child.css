@@ -8,6 +8,6 @@ table{
 
   .empTable{
     flex:5;
-    height:100vh;
+    height:250px;
     overflow: scroll;
   }

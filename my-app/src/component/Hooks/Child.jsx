@@ -8,7 +8,8 @@ import React, { forwardRef,
   import data from "./data.json";
   
   const Child = forwardRef((props,ref) => {
-  //state save rakhi ek function bnaya scroll event ka ki hmara scroll uor hai to down chla jye
+  //state save rakhi ek function bnaya scroll event ka ki hmara scroll upae  hai to down chla jye
+  
   //and vise virsa
     const saveRef = useRef();
     const [state,setState] = useState(true);

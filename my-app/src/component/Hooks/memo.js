@@ -5,7 +5,6 @@ function View() {
         return (
             <>
             <input type ="text" name=""id="/>
-            "
             </>
         )
     }
