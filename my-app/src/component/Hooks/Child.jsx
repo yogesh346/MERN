@@ -24,6 +24,7 @@ import React, { forwardRef,
           setState(true);
         }
       },
+      
     }));
   
     const renderTableCell = ({ id, parent,title }, index) => {
