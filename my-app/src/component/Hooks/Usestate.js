@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
 function Usestate() {
-    const [count,Setcounter] = Usestate("yogesh")
+    const [count,Setcounter] = Usestate(0)
     let updatecount = () => {
-        Setcounter(count + 2)
+        Setcounter(count + 1)
     }
   return (
     <div>
@@ -14,4 +14,4 @@ function Usestate() {
     </div>
   );
 }
-export default useState;
+export default Usestate;

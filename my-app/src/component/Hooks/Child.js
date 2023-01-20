@@ -14,3 +14,5 @@ function Child({ index, text, handleChangeChild }) {  //parent ki jo props pass 
 
 export default memo(Child);
 //yha pe export kr diya memo kar k  array li type text hai number hai or value bhi number main hai 
+//jo bhi mene parent class m likha hoga name woh children naam kruga props ki jagha 
+//or wo output main dono value print ho jyeg
