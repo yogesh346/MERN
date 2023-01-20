@@ -7,10 +7,10 @@ function Child({ index, text, handleChangeChild }) {  //parent ki jo props pass 
   console.log("here", index);  //printing statement
   return (
     <div>
-      <input type="text" value={text} onChange={inputChange} /> 
+      <input type="text" value={text} onChange={inputChange} />  
     </div>
   );
 }
 
 export default memo(Child);
-//yha pe export kr diya memo kar k
+//yha pe export kr diya memo kar k  array li type text hai number hai or value bhi number main hai 

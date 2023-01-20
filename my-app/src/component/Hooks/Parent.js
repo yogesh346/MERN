@@ -14,12 +14,12 @@ export default function Parent() {
     []
   );
 
-  const renderInput = (value, index) => {      //ek  function bnaya renderinput kr k
+  const renderInput = (value, index) => {      //ek  function bnaya render input kr k
     return (                               //text box yha pe return ho jyega
       <Child           //child ka sara code yha aa jyega
-        key={`input${index}`}       //sara value set kra hai index ki for eg 1 2 3
+        key={`input${index}`}       //sara value set kra hai index ki for eg 1 2 3 $iska mtlb statement m koi variable dalna hai to use hota hai
         text={value}            //array ki value pass hogi 
-        handleChangeChild={handleChange}  //props pass kr rha haihandlechangee
+        handleChangeChild={handleChange}  //props pass kr rha haihand lechangee
         index={index}      //yha index pass ho rha hai
       ></Child>            //close kr diya
     );
