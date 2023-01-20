@@ -12,7 +12,7 @@ import React from 'react'
 export default function (props) {
   return (
     <div>
-    <h1>{props.dhiman} Dhiman</h1>
+    <h1>{props.} Dhiman</h1>
     </div>
   )
 }
