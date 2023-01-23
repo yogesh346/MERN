@@ -1,11 +1,11 @@
 import React from 'react'
 import { Fragment } from 'react'
 //import Props from '../component/Hooks/Props'
-import Parent from '../component/Call/Parent'
+import Papa from '../component/Hooks/Papa'
 const App = () => {
   return (
     // <Fragment>
-        <Parent/>
+        <Papa/>
      //   <props name = {"yogesh"}/>
     //</Fragment>
   )
