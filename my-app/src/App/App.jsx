@@ -1,11 +1,11 @@
 import React from 'react'
 import { Fragment } from 'react'
 //import Props from '../component/Hooks/Props'
-import Papa from '../component/Hooks/Papa'
+import Useeffectt from '../component/Hooks/Useeffectt'
 const App = () => {
   return (
     // <Fragment>
-        <Papa/>
+        <Useeffectt/>
      //   <props name = {"yogesh"}/>
     //</Fragment>
   )
