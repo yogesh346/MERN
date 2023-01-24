@@ -21,10 +21,10 @@ const Layout = () => {
         </li>
         <ul>
           <li>
-            <Link to="/Contact1">Contact1</Link>
+            <Link to="/contact/Contact1">Contact1</Link>
           </li>
           <li>
-            <Link to="/Contact2">Contact2</Link>
+            <Link to="/contact/Contact2">Contact2</Link>
           </li>
         </ul>
       </ul>

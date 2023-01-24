@@ -3,7 +3,7 @@ import React from 'react'
 function Contact2() {
   return (
     <div>
-      <h2>hello</h2>
+      <h2>Chandigarh</h2>
     </div>
   )
 }
