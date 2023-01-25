@@ -1,12 +1,15 @@
-import React from 'react'
+import React  from 'react'
 import { Fragment } from 'react'
+import { BrowserRouter } from 'react-router-dom'
 //import Props from '../component/Hooks/Props'
 //import Useref from '../component/Hooks/Router/
-import Routring from '../component/Router/Routring'
+import Useroutring from '../component/Router/Useroutring'
 const App = () => {
   return (
     // <Fragment>
-        <Routring/>
+    <BrowserRouter>
+        <Useroutring/>
+        </BrowserRouter>
      //   <props name = {"yogesh"}/>
     //</Fragment>
   )
