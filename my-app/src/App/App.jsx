@@ -1,18 +1,17 @@
-import React  from 'react'
-import { Fragment } from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import React from "react";
+// import { Fragment } from 'react'
 //import Props from '../component/Hooks/Props'
 //import Useref from '../component/Hooks/Router/
-import Useparams from '../component/Router/Usepa'
-const App = () => {
+// import Details from '../component/Router/Details'
+// import Main from "../component/Router/Main"
+import Counter from "../component/Redux/Counter";
+
+function App() {
   return (
-    // <Fragment>
-    <BrowserRouter>
-        <Useparams/>
-        </BrowserRouter>
-     //   <props name = {"yogesh"}/>
-    //</Fragment>
-  )
+    <div className="App">
+      <Counter />   
+    </div>
+  );
 }
 
 export default App;
