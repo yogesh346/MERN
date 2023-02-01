@@ -3,7 +3,7 @@ import counterReducer from "./CounterSlice";
 
 const Store = configureStore({
     reducer:{
-        counter:counterReducer,//counterslice se aa ra hai
+        counter:counterReducer,//counterslice se aa ra hai 
     },
 });
 export default Store;

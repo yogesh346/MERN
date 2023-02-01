@@ -4,13 +4,12 @@ import React from "react";
 //import Useref from '../component/Hooks/Router/
 // import Details from '../component/Router/Details'
 // import Main from "../component/Router/Main"
-import Counter from "../component/Redux/Counter";
+//import Counter from "../component/Redux/Counter";
+import Rout from "./component/Redux/Rout"
 
 function App() {
   return (
-    <div className="App">
-      <Counter />   
-    </div>
+  <Rout />  
   );
 }
 
