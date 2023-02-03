@@ -2,11 +2,25 @@
   text-align: center;
 }
 
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+/* header style */
+.header{
+  background-color:orange;
+  height:100px;
+}
+.cart-div{
+  float:right;
+  margin:25;
+  position: relative;
+}
+.cart-div img{
+  width: 30px;
+}
+/* header style */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

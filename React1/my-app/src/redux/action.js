@@ -3,7 +3,7 @@ export const addtoCart = (data) => {
 
     console.warn("action called",data)
     return {
-        type:'REMOVE_TO_CART',
+        type:'ADD_TO_CART',
         data:"1 item"
     }
 }
