@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchData, load1, loading, setData }  from "../store/Showslice";
 
 function Disp() {
-  const dispatch = useDispatch();  //
+  const dispatch = useDispatch();  //dispatch ka mtlb kuch data send ya dispatch  kr re h action bali file m
 
   const Count = useSelector(fetchData); //seleter bnaya hau data nikalne k liye selector m se
   const load = useSelector(load1);
@@ -17,9 +17,7 @@ function Disp() {
   }, []);
 
 
-  Count.forEach((item, index) => {    //
-    console.log(item);
-  });
+ 
 
   const renderCell = ({id,name,email}, index) => { //jo bhi row object m fetch ho ri uski index nikal rha hai
     return (
