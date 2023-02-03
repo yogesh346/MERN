@@ -1,3 +1,4 @@
-export const cartData = (data = [],action)=> {
-    console.warn(action)
+export const cartData = (data = [],action) => {
+    console.warn("reducer",action)
+    return "abc"
 }
