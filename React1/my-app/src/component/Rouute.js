@@ -1,5 +1,5 @@
 
-import { Route, Routes, useNavigate } from "react-router-dom";
+/*import { Route, Routes, useNavigate } from "react-router-dom";
 import Disp from "./Disp";
 import Store from "../store/store";
 

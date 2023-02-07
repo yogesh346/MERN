@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+/*import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData, load1, loading, setData }  from "../store/Showslice";
 

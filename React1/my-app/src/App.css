@@ -2,31 +2,46 @@
   text-align: center;
 }
 
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-/* header style */
-.header{
-  background-color:orange;
-  height:100px;
-}
-.cart-div{
-  float:right;
-  margin:25px;
-  position: relative;
-}
-.cart-div img{
-  width: 30px;
-}
-/* header style */
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
+/ app header /
+.header{
+  background-color: green;
+  height: 50px;
+}
+ 
 
+/* .cart-div{
+  float: right;
+  margin: 35px;
+  position: relative;
+  color: white;
+} */
+
+
+.product-item{
+  border: 1px solid #ccc;
+  padding: 20px;
+    margin: 20px;
+    width: 200px;
+}
+
+.product-item img{
+  width: 60px;
+  
+}
+.product-container{
+  display: flex;
+  flex-wrap: wrap;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
