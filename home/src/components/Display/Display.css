@@ -130,29 +130,6 @@ body {
 
 }
 
-input[type=text], select {
-  width: 100%;
-  padding: 12px 12px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  background-color: #6a5cd6;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  width: 115%;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
 
 .footer {
   display: flex;

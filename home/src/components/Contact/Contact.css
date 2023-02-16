@@ -1,0 +1,47 @@
+.Contact {
+
+display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  height: calc(100vh - 6rem);
+    width: calc(100vw - 10rem);
+}
+
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 2px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+input[type=email], select {
+    width: 100%;
+    padding: 12px 2px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  legend{
+    text-align: center;
+    font-size: x-large;
+  }
+
+  fieldset{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+
+.inp{
+    width: auto;
+}
+
+.lbl{
+  font-size: xx-large;
+}
