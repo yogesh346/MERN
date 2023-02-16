@@ -9,23 +9,23 @@ function Ref() {
 
   useEffect(() => {
     if (ref.current.clientHeight < ref.current.scrollHeight) {
-      //jb clientHeight kam hogi scrole height se tbhi stae true hogi aur ... ayega
-      setTecno(true); // to ye shatae true hogii to condition se ... print hoga
+      //jb clientHeight kam hogi scroll height se tbhi state true hogi aur ... ayega
+      setTecno(true); // to ye state true hogii to condition se ... print hoga
     }
   }, [ref, ref?.current]); //dependency mei check hora hai ki kab reff change hoga
 
   //ek custom function banaya hai for useLayoutEffect() Hook
   const call = () => {
     if (ref.current?.clientHeight < ref.current?.scrollHeight) {
-      //same hi condition lagai gai hai useEffect walii
-      setTecno(true); //age if wali condition sahi hogii to state true banegii, nahi to else part chalega jo ki state false karega to ...  nahi show hogaa
+      //same hi condition lagai gyi hai useEffect walii
+      setTecno(true); //aage if wali condition sahi hogii to state true banegii, nahi to else part chalega jo ki state false karega to ...  nahi show hogaa
     } else setTecno(false);
   };
 
   useLayoutEffect(() => {
     window.addEventListener("resize", call); // browser mei ye bana banaya function hai jo resize mei kuch harkat karta hai jab b browser ka size badalta haii
     return () => {
-      window.removeEventListener("remove", call); //ye wala tab harkat karega agr ham page se hatjayeingey
+      window.removeEventListener("remove", call); //ye wala tab harkat karega agr ham page se hat jayege
     };
   }, [call]); //call dependency tab chalegii jab call mei koi value change huii nai to useLayoutEffect kaam nahi karegaa tab takk
 
