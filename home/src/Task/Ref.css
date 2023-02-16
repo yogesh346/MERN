@@ -1,0 +1,16 @@
+
+
+.listItem{
+    overflow: hidden;
+    position: relative;
+    line-Height: 24px;
+    text-Align: justify;
+    padding-right: 1em;
+    height: 72px;
+    width: 90%;
+}
+  .dot{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
