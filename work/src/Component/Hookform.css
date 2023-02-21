@@ -1,0 +1,9 @@
+.formfield {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputField {
+  line-height: 1cm;
+}
