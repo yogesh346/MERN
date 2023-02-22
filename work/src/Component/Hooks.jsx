@@ -1,99 +1,111 @@
-import React from "react";
-import { Form, Button } from "semantic-ui-react";
+import React, { useEffect } from "react";
+import { Form, Checkbox, Button } from "semantic-ui-react";
 import { useForm } from "react-hook-form";
 import Notes from "./Notes";
+import CustomInput from "./CustomInput";
+import RadioButton from "./RadioButton";
 
 export default function FormValidation() {
   const {
     register,
+    setValue,
+    trigger,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  //const namevalidation = { required: true };
+  const firstnamevalidation = { required: true };
+  const lastnamevalidation = { required: true };
+  const Phonevalidation = { required: true };
+  const Emailvalidation = { required: true };
+  const passwordvalidation = { required: true };
+  const Gendervalidation = { required: true };
+
+  useEffect(() => {
+    register("firstname", firstnamevalidation);
+    register("lastname", lastnamevalidation);
+    register("Phone", Phonevalidation);
+    register("Email", Emailvalidation);
+    register("password", passwordvalidation);
+    register("Gender", Gendervalidation);
+  });
+
   const onSubmit = (data) => {
     console.log(data);
   };
+  // console.log(errors);
   return (
-    <div>
+    <div className="HooksForm">
       <Form onSubmit={handleSubmit(onSubmit)}>
-        <h3>User Registration Form</h3>
-        <Form.Field>
-          <label>First Name</label>
-          <input
-            placeholder="First Name"
-            type="text"
-            {...register("firstName", { required: true, maxLength: 10 })}
-          />
-        </Form.Field>
-        {errors.firstName && <p>This field is required</p>}
+        <h3>React Hook Form</h3>
 
-        <Form.Field>
-          <label>Last Name</label>
-          <input
-            placeholder="Last Name"
-            type="text"
-            {...register("lastName", { required: true, maxLength: 10 })}
-          />
-        </Form.Field>
-        {errors.lastName && <p>This field is required</p>}
-        <Form.Field>
-          <label>Age</label>
-          <input
-            placeholder="Age"
-            type="text"
-            {...register("Age", { required: true, maxLength: 10 })}
-          />
-        </Form.Field>
-        {errors.Age && <p>This field is required</p>}
-        <Form.Field>
-          <label>Gender</label>
-          <input
-            placeholder="Gender"
-            type="text"
-            {...register("Gender", { required: true, maxLength: 10 })}
-          />
-        </Form.Field>
-        {errors.Gender && <p>This field is required</p>}
+        <CustomInput
+          name="firstname"
+          placeholder="First Name"
+          register={register}
+          errors={errors}
+          setValue={setValue}
+          trigger={trigger}
+          validations={firstnamevalidation}
+        />
 
-        <Form.Field>
-          <label>Email</label>
-          <input
-            placeholder="Email"
-            type="email"
-            {...register("email", {
-              required: true,
-              pattern:
-                /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-            })}
-          />
-        </Form.Field>
-        {errors.email && <p>This field is required</p>}
-        <Form.Field>
-          <label>Password</label>
-          <input
-            placeholder="Password"
-            type="password"
-            {...register("password", {
-              required: true,
-              pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$/,
-            })}
-          />
-        </Form.Field>
-        {errors.password && <p>This field is required</p>}
-        <Form.Field>
-          <label>Phoneno</label>
-          <input
-            placeholder="phoneno"
-            type="text"
-            {...register("Phoneno", { required: true, maxLength: 10 })}
-          />
-        </Form.Field>
-        {errors.Phoneno && <p>This field is required</p>}
+        <CustomInput
+          name="lastname"
+          placeholder="Last Name"
+          register={register}
+          errors={errors}
+          setValue={setValue}
+          trigger={trigger}
+          validations={lastnamevalidation}
+        />
+
+        <RadioButton
+          name="Gender"
+          register={register}
+          errors={errors}
+          // placeholder={"Gender"}
+          setValue={setValue}
+          trigger={trigger}
+          validations={Gendervalidation}
+        />
+
+        <CustomInput
+          name="Email"
+          placeholder="Email"
+          register={register}
+          errors={errors}
+          setValue={setValue}
+          trigger={trigger}
+          validations={Emailvalidation}
+        />
+        <CustomInput
+          name="password"
+          placeholder="password"
+          register={register}
+          errors={errors}
+          setValue={setValue}
+          trigger={trigger}
+          validations={passwordvalidation}
+        />
+        <CustomInput
+          name="Phone"
+          placeholder="Phone"
+          register={register}
+          errors={errors}
+          setValue={setValue}
+          trigger={trigger}
+          validations={Phonevalidation}
+        />
 
         <div className="from-group">
           {" "}
           {/*yha notes bali file chal re hai */}
           <Notes register={register} errors={errors} />
         </div>
+        <Form.Field>
+          <Checkbox label="I agree to the Terms and Conditions" />
+        </Form.Field>
         <Button type="submit">Submit</Button>
       </Form>
     </div>
