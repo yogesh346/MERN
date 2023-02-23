@@ -2,45 +2,39 @@ import React, { Fragment, useState } from "react";
 import { Form, Radio } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 const RadioButton = ({
-  register,
-  errors,
+  //hook bali file se aa rha hai destructor ho k
   setValue,
   trigger,
   name,
-  validations,
 }) => {
-  const [gender, setGender] = useState(null);
+  const [gender, setGender] = useState(null); //state bnaya trake krne k liye gender ka value male ya female
   const handleChange = (event, { value }) => {
-    setValue(name, value);
+    //yha pe value change hogi male ya female
+    setValue(name, value); //react hook form m store ki value change krne k liye
     trigger(name);
-    setGender(value);
+    setGender(value); //display m value dikhne k liye
   };
   return (
     <>
       <Form.Field>
+        {" "}
+        {/*semantic ui ka dropdown use krne k liye*/}
         <Radio
-          label="Male"
+          label="Male" //ye dikhega screen pe
           name="radioGroup"
           value="Male"
           checked={gender === "Male"}
-          onChange={handleChange}
+          onChange={handleChange} //yha pe mene function pass kiya jb b m handlechange bala function call hoga
         />
       </Form.Field>
       <Form.Field>
+        {" "}
+        {/*same upr bale k jaise hoga*/}
         <Radio
           label="Female"
           name="radioGroup"
           value="Female"
           checked={gender === "Female"}
-          onChange={handleChange}
-        />
-      </Form.Field>
-      <Form.Field>
-        <Radio
-          label="Other"
-          name="radioGroup"
-          value="Other"
-          checked={gender === "Other"}
           onChange={handleChange}
         />
       </Form.Field>

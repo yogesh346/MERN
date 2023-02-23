@@ -1,25 +1,35 @@
 import React from "react";
-import { Input, Form } from "semantic-ui-react";
+import { Input, Form, Popup, Icon } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 
 function CustomInput({
+  //ye sare hooks bali file se aa re  hai destructor ho kr
   setValue,
-  trigger,
+  trigger, // check hone lgta hai dubara agr koi field khali ha to usko bhro
   errors,
   name,
-  validations,
-  register,
   placeholder,
 }) {
-  const Change = async (e, { name, value }) => {
-    setValue(name, value);
-    await trigger(name);
+  const Change = (e, { name, value }) => {
+    //change ka function bnaya change krne k liye, e  event receive kr ra hai
+    setValue(name, value); //react hook form m store ki value change krne k liye
+    trigger(name);
   };
 
   return (
     <div>
       <Form.Field>
-        <label>{name}</label>
+        <div>
+          <label>{name}</label>
+          {name === "Age" && (
+            <Popup
+              trigger={
+                <Icon color="grey" name="question circle" size="small" />
+              }
+              content="Age is between 18 and 40"
+            />
+          )}
+        </div>
         <Input
           type="text"
           name={name}
