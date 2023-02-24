@@ -1,5 +1,5 @@
 import { Dropdown } from "semantic-ui-react"; //dropdown import krwaya hai semantic ui ka
-import "semantic-ui-css/semantic.min.css";
+
 const countryOptions = [
   { key: "a", value: "Physics", text: "Physics" }, //yha pe mene values de di jo jo mene data dikhana hai dropdown m
   { key: "b", value: "Chemistry", text: "Chemistry" },
@@ -18,7 +18,7 @@ const CustomDropdown = ({ placeholder, name, errors, setValue }) => {
   };
   return (
     <>
-      <label>Department</label>
+      <label>Department:</label>
       <Dropdown
         name={name}
         fluid
@@ -27,7 +27,7 @@ const CustomDropdown = ({ placeholder, name, errors, setValue }) => {
         placeholder={placeholder}
         onChange={Change}
       />
-      {errors[name]?.type === "required" && <p>Please select a {name}</p>}{" "}
+      {errors[name]?.type === "required" && <p>Please select a {name}</p>}
     </>
   );
 };

@@ -1,32 +1,38 @@
 import React, { useEffect } from "react";
-import { Form, Checkbox, Button } from "semantic-ui-react";
+import { Form, Button } from "semantic-ui-react";
 import { useForm } from "react-hook-form";
-import Notes from "./Notes";
-import CustomInput from "./CustomInput";
-import RadioButton from "./RadioButton";
-import CustomDropdown from "./Dropdown";
-import CustomCheckbox from "./Checkbox";
+
+import {
+  Notes,
+  CustomCheckbox,
+  CustomDropdown,
+  CustomInput,
+  RadioButton,
+  firstnamevalidation,
+  lastnamevalidation,
+  Agevalidation,
+  Gendervalidation,
+  Phonevalidation,
+  Termsvalidation,
+  Emailvalidation,
+  normalizePhone,
+  Departmentvalidation,
+} from "../Component";
 
 export default function FormValidation() {
   const {
-    register, //trake or manage krta hai input field ko
+    register, //Trake or manage krta hai input field ko
     setValue, //khud se value update krne k liye use kiya hai
-    trigger, //check hone lgta hai dubara agr koi field khali ha to usko bhro
+    trigger,
+    getValues, //check hone lgta hai dubara agr koi field khali ha to usko bhro
     handleSubmit, //react hook form ka method hai from submit krne k liye
     formState: { errors }, //sare errors ki information rhti h isme
-  } = useForm(); //sara hook form ka function return krte hai phr humne iska destructur kr k alg alg name de diye hai
+  } = useForm(); //sara hook form ka function return krte hai phr humne
+  //iska destructur kr k alg alg name de diye hai upr register setvalue  trigger  etc
 
   //ye validation ka rule hai ki kon se validation m kya hona chahiye
-  const firstnamevalidation = { required: true };
-  const lastnamevalidation = { required: true };
-  const Phonevalidation = { required: true };
-  const Emailvalidation = { required: true };
-  const Agevalidation = { required: true, min: 18, max: 40 };
-  const Departmentvalidation = { required: true };
-  const Gendervalidation = { required: true };
-  const Termsvalidation = { required: true };
 
-  //register kr rha hai sbko input field ko
+  // register kr rha hai input field ko and validation lga rha hai
   useEffect(() => {
     register("firstname", firstnamevalidation);
     register("lastname", lastnamevalidation);
@@ -39,30 +45,29 @@ export default function FormValidation() {
   });
 
   const onSubmit = (data) => {
-    //console m data dekhne k liye lgaya hai
     console.log(data);
   };
-  //console.log(errors); //console m error dekhne k liye
+  console.log(errors);
+
   return (
     <div className="HooksForm">
-      {" "}
       {/*css use ki hai mene hooksform pe*/}
       <Form onSubmit={handleSubmit(onSubmit)}>
         <h3>React Hook Form</h3>
 
         <CustomInput
-          name="firstname" //register krne k liye name  diya hai
+          name="firstname" //register krne k liye firstname  diya hai
           placeholder="First Name"
-          register={register} // yha pe sare method pass ho ra hai upr bala  jo useform se aa ra hai
-          errors={errors}
+          register={register} // hook form ka register use kr re  hai
+          errors={errors} //error pass kr raa hai  error object hook form ka
           setValue={setValue}
-          trigger={trigger}
+          trigger={trigger} //
           validations={firstnamevalidation}
         />
 
         <CustomInput
           name="lastname"
-          placeholder="last Name"
+          placeholder="Last Name"
           register={register}
           errors={errors}
           setValue={setValue}
@@ -74,9 +79,9 @@ export default function FormValidation() {
           name="Gender"
           register={register}
           errors={errors}
-          // placeholder={"Gender"}
           setValue={setValue}
           trigger={trigger}
+          getValues={getValues}
           validations={Gendervalidation}
         />
 
@@ -103,6 +108,7 @@ export default function FormValidation() {
           placeholder="Phone"
           register={register}
           errors={errors}
+          normalize={normalizePhone}
           setValue={setValue}
           trigger={trigger}
           validations={Phonevalidation}
@@ -127,6 +133,8 @@ export default function FormValidation() {
             errors={errors}
             setValue={setValue}
             trigger={trigger}
+            register={register}
+            getvalues={getValues}
           />
         </Form.Field>
         <Button type="submit">Submit</Button>
